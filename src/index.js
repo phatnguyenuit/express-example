@@ -15,6 +15,7 @@ mongoose.Promise = global.Promise;
 const app = express();
 
 // Application-Level Middleware
+app.use(express.static('public'));
 app.use(cors());
 
 app.use(bodyParser.json());
@@ -32,6 +33,7 @@ app.use(async (req, res, next) => {
 app.use('/session', routes.session);
 app.use('/users', routes.user);
 app.use('/messages', routes.message);
+app.use('/ssr', routes.ssr);
 
 app.get('/', (req, res, next) => {
   res.send('Hello from ExpressJS');

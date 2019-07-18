@@ -12,13 +12,17 @@
     "cowsay-browser": "^1.1.8",
     "dotenv": "^8.0.0",
     "express": "^4.16.3",
+    "handlebars": "^4.1.2",
     "lodash": "^4.17.14",
     "mongoose": "^5.6.5",
     "morgan": "^1.9.1",
-    "node-fetch": "^2.1.1"
+    "node-fetch": "^2.1.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "scripts": {
     "start": "nodemon --exec babel-node src/index.js",
+    "dev": "webpack -wd",
     "build": "babel src -w -d build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -27,6 +31,10 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/preset-env": "^7.5.5",
-    "nodemon": "^1.19.1"
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "nodemon": "^1.19.1",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6"
   }
 }
