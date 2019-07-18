@@ -3,7 +3,9 @@ import { Router } from 'express';
 const router = Router();
 
 router.get('/', async (req, res) => {
-  const messages = await req.context.models.Message.find();
+  const messages = await req.context.models.Message.find({
+    user: req.context.me.id
+  });
   return res.send(messages);
 });
 
