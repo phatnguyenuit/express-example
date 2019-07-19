@@ -7,8 +7,11 @@ services:
     ports:
       - 4000:4000
     volumes:
-      - .:/usr/src/express-example
-      - /usr/src/express-example/node_modules
+      - ./app/public:/usr/src/express-example/public
+      - ./app/src:/usr/src/express-example/src
+      - ./app/package.json:/usr/src/express-example/package.json
+      - ./app/webpack.config.js:/usr/src/express-example/webpack.config.js
+      - ./app/nodemon.json:/usr/src/express-example/nodemon.json
     links:
       - mongo
   mongo:

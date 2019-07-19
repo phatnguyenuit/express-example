@@ -3,6 +3,7 @@ import 'dotenv/config';
 import models, { connectDb } from './models';
 
 import bodyParser from 'body-parser';
+import compression from 'compression';
 import cors from 'cors';
 import cowsay from 'cowsay-browser';
 import express from 'express';
@@ -16,6 +17,17 @@ const app = express();
 
 // Application-Level Middleware
 app.use(express.static('public'));
+function shouldCompress(req, res) {
+  if (req.headers['x-no-compression']) return false;
+  return compression.filter(req, res);
+}
+
+app.use(
+  compression({
+    level: 2, // set compression level from 1 to 9 (6 by default)
+    filter: shouldCompress // set predicate to determine whether to compress
+  })
+);
 app.use(cors());
 
 app.use(bodyParser.json());

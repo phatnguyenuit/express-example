@@ -3,7 +3,7 @@ const path = require('path');
 const config = {
   entry: {
     vendor: ['@babel/polyfill', 'react'],
-    app: ['./src/components/index.js']
+    app: ['./src/client/index.js']
   },
   output: {
     path: path.resolve(__dirname, 'public'),
@@ -12,7 +12,7 @@ const config = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.js?$/,
         use: {
           loader: 'babel-loader',
           options: {
@@ -24,7 +24,7 @@ const config = {
     ]
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json', '.wasm', '.mjs', '*']
+    extensions: ['.js', '.jsx']
   }
 };
 
