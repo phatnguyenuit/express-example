@@ -11,8 +11,6 @@ export const fetchArticles = source => dispatch => {
   } else {
     url = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`;
   }
-  console.log('api', API_KEY);
-
   axios
     .get(url)
     .then(res =>

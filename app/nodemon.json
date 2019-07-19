@@ -1,4 +1,4 @@
 {
-  "ext": "js,jsx",
-  "delay": "5000"
+  "ext": "js jsx json",
+  "delay": "1000"
 }

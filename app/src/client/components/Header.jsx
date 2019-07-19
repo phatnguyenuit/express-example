@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 
 import { Link } from 'react-router-dom';
 
-const Header = ({ basePath = '/' }) => {
+const Header = ({ basePath = '' }) => {
   console.log('basePath', basePath);
   const [menuOpen, setMenuToggle] = useState(false);
 
@@ -53,7 +53,7 @@ const Header = ({ basePath = '/' }) => {
               </li>
               <li>
                 <Link
-                  to={`${basePath}articles/techradar`}
+                  to={`${basePath}/articles/techradar`}
                   className="item"
                   onClick={toggleMenu}
                 >
@@ -62,7 +62,7 @@ const Header = ({ basePath = '/' }) => {
               </li>
               <li>
                 <Link
-                  to={`${basePath}articles/mashable`}
+                  to={`${basePath}/articles/mashable`}
                   className="item"
                   onClick={toggleMenu}
                 >
@@ -71,7 +71,7 @@ const Header = ({ basePath = '/' }) => {
               </li>
               <li>
                 <Link
-                  to={`${basePath}articles/the-verge`}
+                  to={`${basePath}/articles/the-verge`}
                   className="item"
                   onClick={toggleMenu}
                 >
@@ -80,7 +80,7 @@ const Header = ({ basePath = '/' }) => {
               </li>
               <li>
                 <Link
-                  to={`${basePath}articles/the-next-web`}
+                  to={`${basePath}/articles/the-next-web`}
                   className="item"
                   onClick={toggleMenu}
                 >
@@ -89,7 +89,7 @@ const Header = ({ basePath = '/' }) => {
               </li>
               <li>
                 <Link
-                  to={`${basePath}articles/wired`}
+                  to={`${basePath}/articles/wired`}
                   className="item"
                   onClick={toggleMenu}
                 >
@@ -98,7 +98,7 @@ const Header = ({ basePath = '/' }) => {
               </li>
               <li>
                 <Link
-                  to={`${basePath}articles/recode`}
+                  to={`${basePath}/articles/recode`}
                   className="item"
                   onClick={toggleMenu}
                 >
@@ -108,32 +108,32 @@ const Header = ({ basePath = '/' }) => {
             </ul>
             <ul id="nav-mobile" className="right hide-on-med-and-down">
               <li>
-                <Link to={`${basePath}articles/techradar`} className="item">
+                <Link to={`${basePath}/articles/techradar`} className="item">
                   Tech Radar
                 </Link>
               </li>
               <li>
-                <Link to={`${basePath}articles/mashable`} className="item">
+                <Link to={`${basePath}/articles/mashable`} className="item">
                   Mashable
                 </Link>
               </li>
               <li>
-                <Link to={`${basePath}articles/the-verge`} className="item">
+                <Link to={`${basePath}/articles/the-verge`} className="item">
                   The Verge
                 </Link>
               </li>
               <li>
-                <Link to={`${basePath}articles/the-next-web`} className="item">
+                <Link to={`${basePath}/articles/the-next-web`} className="item">
                   TNW
                 </Link>
               </li>
               <li>
-                <Link to={`${basePath}articles/wired`} className="item">
+                <Link to={`${basePath}/articles/wired`} className="item">
                   Wired
                 </Link>
               </li>
               <li>
-                <Link to={`${basePath}articles/recode`} className="item">
+                <Link to={`${basePath}/articles/recode`} className="item">
                   Recode
                 </Link>
               </li>

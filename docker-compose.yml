@@ -13,7 +13,7 @@ services:
       - ./app/webpack.config.js:/usr/src/express-example/webpack.config.js
       - ./app/nodemon.json:/usr/src/express-example/nodemon.json
       - ./app/.env:/usr/src/express-example/.env
-    links:
+    networks:
       - mongo
   mongo:
     container_name: mymongo
@@ -22,6 +22,8 @@ services:
       - ~/docker/mongodb/data:/data/db
     ports:
       - 27017:27017
+    networks:
+      - mongo
   admin-mongo:
     image: 0x59/admin-mongo:latest
     ports:
@@ -30,5 +32,8 @@ services:
       - PORT=8082
       - CONN_NAME=mongo
       - DB_HOST=mongo
-    links:
+    networks:
       - mongo
+networks:
+  mongo:
+    driver: 'bridge'
