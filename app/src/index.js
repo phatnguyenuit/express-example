@@ -1,13 +1,17 @@
 import 'dotenv/config';
 
-import models, { connectDb } from './models';
+import models, {
+  connectDb
+} from './models';
 
 import bodyParser from 'body-parser';
 import compression from 'compression';
 import cors from 'cors';
 import cowsay from 'cowsay-browser';
 import express from 'express';
-import { initialDatabase } from './helpers/createFakeData';
+import {
+  initialDatabase
+} from './helpers/createFakeData';
 import mongoose from 'mongoose';
 import routes from './routes';
 
@@ -17,6 +21,7 @@ const app = express();
 
 // Application-Level Middleware
 app.use(express.static('public'));
+
 function shouldCompress(req, res) {
   if (req.headers['x-no-compression']) return false;
   return compression.filter(req, res);
@@ -31,7 +36,9 @@ app.use(
 app.use(cors());
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 app.use(async (req, res, next) => {
   req.context = {

@@ -12,6 +12,7 @@ services:
       - ./app/package.json:/usr/src/express-example/package.json
       - ./app/webpack.config.js:/usr/src/express-example/webpack.config.js
       - ./app/nodemon.json:/usr/src/express-example/nodemon.json
+      - ./app/.env:/usr/src/express-example/.env
     links:
       - mongo
   mongo:

@@ -10,18 +10,17 @@ const config = {
     filename: '[name].js'
   },
   module: {
-    rules: [
-      {
-        test: /\.js?$/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env', '@babel/preset-react']
-          }
-        },
-        exclude: /node_modules/
-      }
-    ]
+    rules: [{
+      test: /\.js?$/,
+      loader: 'babel-loader',
+      use: {
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env', '@babel/preset-react']
+        }
+      },
+      exclude: /node_modules/
+    }]
   },
   resolve: {
     extensions: ['.js', '.jsx']

@@ -16,45 +16,45 @@ const Header = ({ basePath = '/' }) => {
     transform: 'translateX(0px)'
   };
   return (
-    <div className='navbar-fixed'>
-      <nav className='red'>
-        <div className='container'>
-          <div className='nav-wrapper'>
-            <a href={basePath} className='brand-logo'>
+    <div className="navbar-fixed">
+      <nav className="red">
+        <div className="container">
+          <div className="nav-wrapper">
+            <a href={basePath} className="brand-logo">
               SSR News
             </a>
             <a
-              href='javascript:void(0)'
+              href="javascript:void(0)"
               onClick={toggleMenu}
-              className='sidenav-trigger right'
+              className="sidenav-trigger right"
             >
-              <i className='material-icons'>menu</i>
+              <i className="material-icons">menu</i>
             </a>
             <div
-              className='sidenav-overlay'
+              className="sidenav-overlay"
               style={menuOpen ? { display: 'block', opacity: 1 } : null}
               onClick={toggleMenu}
             />
             <ul
-              id='slide-out'
-              className='sidenav'
+              id="slide-out"
+              className="sidenav"
               style={menuOpen ? stylesOpen : null}
             >
               <li>
-                <a className='subheader'>Menu</a>
+                <a className="subheader">Menu</a>
               </li>
               <li>
-                <div className='divider' />
+                <div className="divider" />
               </li>
               <li>
-                <Link to={basePath} className='item' onClick={toggleMenu}>
+                <Link to={basePath} className="item" onClick={toggleMenu}>
                   Home
                 </Link>
               </li>
               <li>
                 <Link
-                  to={`${basePath}/articles/techradar`}
-                  className='item'
+                  to={`${basePath}articles/techradar`}
+                  className="item"
                   onClick={toggleMenu}
                 >
                   Tech Radar
@@ -62,8 +62,8 @@ const Header = ({ basePath = '/' }) => {
               </li>
               <li>
                 <Link
-                  to={`${basePath}/articles/mashable`}
-                  className='item'
+                  to={`${basePath}articles/mashable`}
+                  className="item"
                   onClick={toggleMenu}
                 >
                   Mashable
@@ -71,8 +71,8 @@ const Header = ({ basePath = '/' }) => {
               </li>
               <li>
                 <Link
-                  to={`${basePath}/articles/the-verge`}
-                  className='item'
+                  to={`${basePath}articles/the-verge`}
+                  className="item"
                   onClick={toggleMenu}
                 >
                   The Verge
@@ -80,8 +80,8 @@ const Header = ({ basePath = '/' }) => {
               </li>
               <li>
                 <Link
-                  to={`${basePath}/articles/the-next-web`}
-                  className='item'
+                  to={`${basePath}articles/the-next-web`}
+                  className="item"
                   onClick={toggleMenu}
                 >
                   TNW
@@ -89,8 +89,8 @@ const Header = ({ basePath = '/' }) => {
               </li>
               <li>
                 <Link
-                  to={`${basePath}/articles/wired`}
-                  className='item'
+                  to={`${basePath}articles/wired`}
+                  className="item"
                   onClick={toggleMenu}
                 >
                   Wired
@@ -98,42 +98,42 @@ const Header = ({ basePath = '/' }) => {
               </li>
               <li>
                 <Link
-                  to={`${basePath}/articles/recode`}
-                  className='item'
+                  to={`${basePath}articles/recode`}
+                  className="item"
                   onClick={toggleMenu}
                 >
                   Recode
                 </Link>
               </li>
             </ul>
-            <ul id='nav-mobile' className='right hide-on-med-and-down'>
+            <ul id="nav-mobile" className="right hide-on-med-and-down">
               <li>
-                <Link to={`${basePath}/articles/techradar`} className='item'>
+                <Link to={`${basePath}articles/techradar`} className="item">
                   Tech Radar
                 </Link>
               </li>
               <li>
-                <Link to={`${basePath}/articles/mashable`} className='item'>
+                <Link to={`${basePath}articles/mashable`} className="item">
                   Mashable
                 </Link>
               </li>
               <li>
-                <Link to={`${basePath}/articles/the-verge`} className='item'>
+                <Link to={`${basePath}articles/the-verge`} className="item">
                   The Verge
                 </Link>
               </li>
               <li>
-                <Link to={`${basePath}/articles/the-next-web`} className='item'>
+                <Link to={`${basePath}articles/the-next-web`} className="item">
                   TNW
                 </Link>
               </li>
               <li>
-                <Link to={`${basePath}/articles/wired`} className='item'>
+                <Link to={`${basePath}articles/wired`} className="item">
                   Wired
                 </Link>
               </li>
               <li>
-                <Link to={`${basePath}/articles/recode`} className='item'>
+                <Link to={`${basePath}articles/recode`} className="item">
                   Recode
                 </Link>
               </li>
