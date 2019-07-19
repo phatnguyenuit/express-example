@@ -1,11 +1,12 @@
 import axios from 'axios';
 
-const API_KEY = process.env.API_KEY || '';
+const API_KEY = process.env.REACT_APP_API_KEY || '';
 
 export const FETCH_ARTICLES = 'fetch_articles';
 
 export const fetchArticles = source => dispatch => {
   let url;
+  console.log(API_KEY)
   if (source) {
     url = `https://newsapi.org/v2/top-headlines?sources=${source}&apiKey=${API_KEY}`;
   } else {

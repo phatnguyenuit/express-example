@@ -17,7 +17,7 @@ const store = createStore(reducers, state, applyMiddleware(thunk));
 ReactDOM.hydrate(
   <Provider store={store}>
     <BrowserRouter>
-      <div>{renderRoutes(Routes)}</div>
+      <div>{renderRoutes(Routes, { basePath: window.location.pathname })}</div>
     </BrowserRouter>
   </Provider>,
   document.querySelector('#root')

@@ -5,11 +5,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { renderRoutes } from 'react-router-config';
 
-const App = ({ route, ...rest }) => {
-  console.log(rest);
+const App = ({ route, basePath = '' }) => {
+  console.log(basePath);
   return (
     <div>
-      <Header basePath={''} />
+      <Header basePath={basePath} />
       <div className="container">
         <ErrorBoundary>{renderRoutes(route.routes)}</ErrorBoundary>
       </div>

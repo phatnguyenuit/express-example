@@ -10,7 +10,7 @@ import renderer from '../helpers/renderer';
 const router = express.Router();
 
 router.get('*', async (req, res) => {
-  const id = 1;
+  const id = null;
   const store = createStore();
   const routes = matchRoutes(configRoutes, req.path);
 
